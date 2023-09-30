@@ -1,0 +1,154 @@
+@use "common" as *;
+
+.headerArea {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 99;
+    background: #fff;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.header-area.header-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 0.3s linear;
+}
+
+.demoPages {
+    color: #334155;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.socialLinks {
+    display: inline-block;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+
+            a {
+                i {
+                    color: #94a3b8;
+                }
+            }
+        }
+    }
+}
+
+.thm-btn {
+    background: $theme-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+
+    i {
+        font-size: 12px;
+    }
+}
+
+
+// mobile navbar start
+
+
+.mobileNavbar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+    --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+    .navLink {
+        .socialLinks {
+            margin-left: 50px;
+
+            @include mq(xs) {
+                margin-left: 20px;
+            }
+
+            ul {
+                margin-top: 30px;
+
+                li {
+                    display: block;
+                    font-size: 12;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+
+                    a {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+
+                        span {
+                            color: #334155;
+                            font-size: 13px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+
+                        i {
+                            margin-right: 10px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.mobileMenuBtn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e4e4e7;
+    background: #fff;
+    position: relative;
+    margin-left: auto;
+
+    .bar1 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 3px;
+        background: #334155;
+    }
+
+    .bar2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%, );
+        width: 18px;
+        height: 3px;
+        background: #334155;
+    }
+
+    .bar3 {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 3px;
+        background: #334155;
+    }
+}
