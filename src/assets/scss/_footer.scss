@@ -1,16 +1,29 @@
 @use "common" as *;
 
 .footerArea {
-    background: #e2e8ef;
-    padding: 70px 0;
-    @include mq(xs){
+    background: $theme-color-2;
+    padding: 60px 0 40px;
+    color: #fff;
+
+    @include mq(xs) {
         padding-top: 250px;
     }
 }
 
 .footer-logo {
     display: block;
-    width: 220px;
+    width: 250px;
+}
+
+.footer-description {
+    p {
+        color: #fff;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-align: justify;
+    }
 }
 
 .footerWrapper {
@@ -77,6 +90,8 @@
 }
 
 .footerWidget {
+    margin-top: 14px;
+
     @include mq(md) {
         text-align: center;
     }
@@ -86,7 +101,7 @@
     }
 
     .titleText {
-        color: #64748b;
+        color: #fff;
         text-transform: uppercase;
         font-weight: 500;
     }
@@ -100,10 +115,10 @@
             a {
                 font-size: 14px;
                 font-weight: 500;
-                color: #475594;
+                color: #fff;
 
                 &:hover {
-                    color: #000;
+                    color: $theme-color;
                 }
             }
         }
@@ -116,7 +131,7 @@
 
         a {
             font-size: 14px;
-            color:#458dd2;
+            color: $theme-color;
         }
     }
 }

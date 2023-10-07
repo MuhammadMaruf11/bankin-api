@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/img/logo/logo.png";
 
 const Footer = () => {
   return (
@@ -7,14 +8,29 @@ const Footer = () => {
       <div className="footerArea">
         <div className="container pb-40 footer-border-bottom">
           <div className="row">
-            <div className="col-xl-4 col-lg-4">
-              <Link className="footer-logo" to="/">
-                <img
-                  src="https://digitaldecoderltd.com/static/media/logo.695cdd6ed7de71118a90.png"
-                  alt="logo"
-                />
-              </Link>
-              <div className="footerWrapper">
+            <div className="col-xl-4 col-lg-4 ">
+              <div className="header-logo mb-3">
+                <Link
+                  className="d-none"
+                  to="https://fbs-tax.com/wp-content/uploads/2020/02/1553262102-api.jpg"
+                >
+                  copyright
+                </Link>
+                <Link to="/">
+                  <img src={Logo} alt="logo" /> Banking
+                </Link>
+              </div>
+              <div className="footer-description ms-3 mb-3 pe-5">
+                <p>
+                  Discover the future of banking with API Banking. Seamlessly
+                  integrate our powerful APIs into your financial solutions or
+                  manage your accounts effortlessly through our user-friendly
+                  interface. Experience the convenience, security, and
+                  innovation that API Banking brings to your financial world.
+                  Join us today and unlock a new era of banking possibilities.
+                </p>
+              </div>
+              <div className="footerWrapper ms-3">
                 <div className="socialLinks">
                   <ul>
                     <li>
@@ -88,10 +104,8 @@ const Footer = () => {
                 {/* Additional information */}
                 <span>
                   Copyright &copy; {new Date().getFullYear()} and All rights
-                  reserved by <Link to='/'>Digital Decoder Ltd</Link>
+                  reserved by <Link to="/">Digital Decoder Ltd</Link>
                 </span>
-                <br />
-                <span>Privacy Policy | Terms of Service</span>
               </div>
             </div>
           </div>

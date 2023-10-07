@@ -1,0 +1,16 @@
+@use "common" as *;
+
+.work-process-area {
+    padding: 70px 0;
+}
+
+.section-title {
+    h6 {
+        color: $theme-color-2;
+        margin-bottom: 4px;
+    }
+
+    h2 {
+        color: $theme-color;
+    }
+}
