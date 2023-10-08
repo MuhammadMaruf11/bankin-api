@@ -1,0 +1,174 @@
+@use "common" as *;
+
+// login page styles
+
+.login-bg {
+    background: url('../img/bg/login.png');
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #00000080;
+        z-index: -1;
+    }
+
+    .login-form-wrap {
+        background: #fff;
+        width: 400px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 25px 10px #00000040;
+
+        h2 {
+            text-align: center;
+        }
+
+        .form {
+            label {}
+
+            input {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}
+
+.admin-layout {
+
+
+
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    height: 100vh;
+    width: 100vw;
+    background: #e4e9f7;
+    color: #000;
+
+
+    /* Navbar Styles */
+    .navbar {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .navbar .btn {
+        margin-right: 10px;
+        margin-left: 250px;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        padding-top: 20px;
+        transition: left 0.3s ease-in-out;
+
+        ul {
+            li {
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    /* Content Styles */
+
+
+    .content {
+        display: flex;
+        transition: all .3s linear;
+        flex-grow: 1;
+        padding: 20px;
+
+        &.shrinked {
+            margin-left: 250px;
+        }
+    }
+
+
+
+    /* Footer Styles */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    /* Styling for Create Plan Page */
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        /* max-width: 400px; */
+        margin: 0 auto;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .sidebar {
+            left: -250px;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+    }
+}

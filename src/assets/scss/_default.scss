@@ -45,10 +45,10 @@ a {
   }
 }
 
-button,
-.btn {
+button {
   outline: 0;
   border: 0;
+  background: transparent;
   @include transition(0.3s);
 
   &:active,
@@ -63,8 +63,7 @@ button:focus,
 input:focus,
 input:focus,
 textarea,
-textarea:focus,
-.btn:focus {
+textarea:focus {
   outline: 0;
   box-shadow: none;
 }
@@ -78,8 +77,6 @@ textarea:focus,
 
 .btn:hover,
 .btn:focus {
-  outline: 0;
-  border: 0;
   box-shadow: none;
   color: #fff;
 }
@@ -155,7 +152,6 @@ p {
 /* Form */
 
 label {
-  color: $gray;
   cursor: pointer;
   font-size: $body-fz;
   font-weight: 400;
@@ -201,9 +197,21 @@ label {
   background: $theme-color;
 
   &:hover {
-    background: $theme-color;
-    color: #fff;
+    background: #fff;
+    color: $theme-color;
     border-color: $theme-color;
+  }
+}
+
+.btn-theme-2 {
+  color: #fff;
+  border-color: $theme-color-2;
+  background: $theme-color-2;
+
+  &:hover {
+    background: #fff;
+    color: $theme-color-2;
+    border-color: $theme-color-2;
   }
 }
 

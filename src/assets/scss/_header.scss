@@ -15,6 +15,7 @@
                 a {
                     &:hover {
                         color: #fff;
+                        color: $theme-color;
                     }
                 }
             }
@@ -33,10 +34,18 @@
     transition: all 0.3s linear;
     box-shadow: 0 0 5px 0 #00000080;
 
+    .header-logo {
+        a {
+            color: $theme-color-2;
+        }
+    }
+
     .socialLinks {
         ul {
             li {
                 a {
+                    color: $theme-color;
+
                     &:hover {
                         color: $theme-color-2;
                     }
@@ -50,7 +59,8 @@
     a {
         display: flex;
         align-items: center;
-        color: #3ab448;
+        // color: $theme-color;
+        color: #fff;
         font-size: 35px;
         text-transform: lowercase;
         font-weight: 600;
@@ -86,7 +96,8 @@
                 font-family: $header-fonts;
                 font-weight: 700;
                 text-transform: uppercase;
-                color: $theme-color;
+                // color: $theme-color;
+                color: #fff;
 
 
 

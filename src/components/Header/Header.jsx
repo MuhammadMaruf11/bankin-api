@@ -40,6 +40,14 @@ const Header = () => {
               <li>
                 <Link to="/transactions">Transactions</Link>
               </li>
+              <li>
+                {" "}
+                {isHeaderFixed ? (
+                  <Link to="/user">Profile</Link>
+                ) : (
+                  <Link to="/user/login/">Login</Link>
+                )}
+              </li>
             </ul>
           </div>
         </div>
@@ -70,10 +78,18 @@ const Header = () => {
                 <div className="socialLinks">
                   <ul>
                     <li>
-                      <Link to="/accounts">Accounts</Link>
+                      <Link to="/api-tools">Tool &amp; API</Link>
                     </li>
                     <li>
-                      <Link to="/transactions">Transactions</Link>
+                      <Link to="/pricing">Pricing</Link>
+                    </li>
+                    <li>
+                      {" "}
+                      {isHeaderFixed ? (
+                        <Link to="/user">Profile</Link>
+                      ) : (
+                        <Link to="/user/login/">Login</Link>
+                      )}
                     </li>
                   </ul>
                 </div>

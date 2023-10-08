@@ -71,7 +71,7 @@ const Footer = () => {
                     <Link to="/">Github</Link>
                   </li>
                   <li>
-                    <Link to="/">free Products</Link>
+                    <Link to="/">Free Products</Link>
                   </li>
                 </ul>
               </div>
@@ -101,10 +101,12 @@ const Footer = () => {
           <div className="row">
             <div className="col-12 text-center">
               <div className="copyRightText">
-                {/* Additional information */}
                 <span>
                   Copyright &copy; {new Date().getFullYear()} and All rights
-                  reserved by <Link to="/">Digital Decoder Ltd</Link>
+                  reserved by{" "}
+                  <Link target="_blank" to="https://digitaldecoderltd.com/">
+                    Digital Decoder Ltd
+                  </Link>
                 </span>
               </div>
             </div>
