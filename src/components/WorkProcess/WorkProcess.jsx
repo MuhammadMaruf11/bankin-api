@@ -19,23 +19,23 @@ const WorkProcess = () => {
               <div className="flowchart-container">
                 <div className="node digital-decoder">Digital Decoder</div>{" "}
                 <div className="arrow">
-                  <i class="fa-sharp fa-solid fa-right-long"></i>
+                  <i className="fa-sharp fa-solid fa-right-long"></i>
                 </div>
                 <div className="node card-holder">Card Holder</div>{" "}
                 <div className="arrow">
-                  <i class="fa-sharp fa-solid fa-right-long"></i>
+                  <i className="fa-sharp fa-solid fa-right-long"></i>
                 </div>
                 <div className="node merchant-website">Merchant Website</div>{" "}
                 <div className="arrow">
-                  <i class="fa-sharp fa-solid fa-right-long"></i>
+                  <i className="fa-sharp fa-solid fa-right-long"></i>
                 </div>
                 <div className="node moneris-gateway">Moneris Gateway</div>{" "}
                 <div className="arrow">
-                  <i class="fa-sharp fa-solid fa-right-long"></i>
+                  <i className="fa-sharp fa-solid fa-right-long"></i>
                 </div>
                 <div className="node card-brand">Card Brand</div>{" "}
                 <div className="arrow">
-                  <i class="fa-sharp fa-solid fa-right-long"></i>
+                  <i className="fa-sharp fa-solid fa-right-long"></i>
                 </div>
                 <div className="node bank">Bank</div>
               </div>

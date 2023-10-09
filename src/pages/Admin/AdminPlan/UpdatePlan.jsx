@@ -41,12 +41,14 @@ const UpdatePlan = () => {
 
   return (
     <AdminLayout>
-      <div className="w-100 p-4">
-        <div className="d-flex align-items-center justify-content-between">
+      <div className="w-100">
+        <div className="content-header">
           <h2>Update Plan</h2>
-          <Link className="btn btn-dark" to="/admin/plans">
-            Back
-          </Link>
+          <div className="cta-btn">
+            <Link className="px-1" to="/admin/plans">
+              Back
+            </Link>
+          </div>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="input-group">

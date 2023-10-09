@@ -1,14 +1,13 @@
 import React from "react";
 
-const AdminFooter = () => {
+const AdminFooter = ({ isOpen }) => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <p>
-          &copy; {new Date().getFullYear()} Your Company Name. All rights
-          reserved.
-        </p>
-      </div>
+    <footer className={`footer ${isOpen ? "shrinked" : ""}`}>
+      <p>
+        &copy; {new Date().getFullYear()}{" "}
+        <span className="text-theme">Digital Decoder Ltd. </span>
+        All rights reserved.
+      </p>
     </footer>
   );
 };

@@ -1,27 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AdminLogo from "../../../assets/img/logo/logo.png";
 
 const AdminSidebar = ({ isOpen }) => {
+  const location = useLocation();
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      <div className="">
-        <div className="admin-logo">
-          <Link to="/admin">
-            <img src={AdminLogo} alt="admin_logo" />
-          </Link>
-        </div>
+      <div className="admin-logo">
+        <Link to="/admin">
+          <img src={AdminLogo} alt="admin_logo" /> banking
+        </Link>
+      </div>
+      <div className="sidebar-list">
         <ul>
           <li>
             {" "}
-            <Link to="/admin">Dashboard</Link>
+            <Link
+              className={location.pathname === "/admin" ? "active" : ""}
+              to="/admin"
+            >
+              {" "}
+              <i class="fa-sharp fa-solid fa-house"></i> <span>Dashboard</span>
+            </Link>
           </li>
           <li>
             {" "}
-            <Link to="/admin/plans">Plan Page</Link>
+            <Link
+              className={location.pathname === "/admin/plans" ? "active" : ""}
+              to="/admin/plans"
+            >
+              <i class="fa-solid fa-circle-dollar"></i> <span>Plan Page</span>
+            </Link>
           </li>
-
-          <li> {/* <Link to="/admin/images">Images Page</Link> */}</li>
         </ul>
       </div>
     </div>

@@ -30,7 +30,7 @@ const Header = () => {
   let mobileMenu;
   if (menuBtn) {
     mobileMenu = (
-      <div class="mobileNavbar flex d-flex">
+      <div className="mobileNavbar flex d-flex">
         <div className="navLink">
           <div className="socialLinks">
             <ul>
@@ -98,11 +98,11 @@ const Header = () => {
             <div className="col-6 d-lg-none d-block text-end">
               <button
                 onClick={() => setMenuBtn(!menuBtn)}
-                class="mobileMenuBtn"
+                className="mobileMenuBtn"
               >
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
+                <span className="bar1"></span>
+                <span className="bar2"></span>
+                <span className="bar3"></span>
               </button>
             </div>
             <div className="col-12">{mobileMenu}</div>

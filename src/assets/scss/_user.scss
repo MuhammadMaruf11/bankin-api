@@ -1,1 +1,32 @@
 @use "common" as *;
+
+.login-wrap {
+    background: $theme-color-2;
+    padding: 40px;
+    border-radius: 8px;
+
+    .login-form {
+        color: #fff;
+        text-align: end;
+
+        .form-group {
+            margin-bottom: 30px;
+            text-align: start;
+
+            input {
+                color: #fff;
+                background: transparent;
+
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+
+        }
+
+        button {
+            font-weight: 600;
+            padding: 8px 24px;
+        }
+    }
+}

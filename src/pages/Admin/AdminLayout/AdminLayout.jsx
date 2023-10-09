@@ -11,12 +11,12 @@ const AdminLayout = ({ children }) => {
   };
   return (
     <div className="admin-layout">
-      <AdminNavbar onToggleSidebar={toggleSidebar} />{" "}
+      <AdminNavbar isOpen={sidebarOpen} onToggleSidebar={toggleSidebar} />{" "}
       <AdminSidebar isOpen={sidebarOpen} />
       <main className={`content ${sidebarOpen ? "shrinked" : " "}`}>
         {children}
       </main>
-      <AdminFooter />
+      <AdminFooter isOpen={sidebarOpen} />
     </div>
   );
 };

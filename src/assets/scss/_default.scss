@@ -46,17 +46,10 @@ a {
 }
 
 button {
-  outline: 0;
-  border: 0;
   background: transparent;
   @include transition(0.3s);
-
-  &:active,
-  &:hover,
-  &:focus {
-    outline: 0;
-    border: 0;
-  }
+  border: 0;
+  outline: 0;
 }
 
 button:focus,
@@ -78,7 +71,6 @@ textarea:focus {
 .btn:hover,
 .btn:focus {
   box-shadow: none;
-  color: #fff;
 }
 
 h1,
