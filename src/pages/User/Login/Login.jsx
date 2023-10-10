@@ -52,7 +52,6 @@ const Login = () => {
                       type="email"
                       id="name"
                       name="email"
-                      value={formData.email}
                       onChange={handleChange}
                       required
                     />
@@ -66,7 +65,6 @@ const Login = () => {
                       type="password"
                       id="password"
                       name="password"
-                      value={formData.password}
                       onChange={handleChange}
                       required
                     />
@@ -75,6 +73,17 @@ const Login = () => {
                     Login
                   </button>
                 </form>
+                <div className="d-flex column-gap-3 justify-content-between mt-4">
+                  <Link className="btn btn-warning" to="/user/forgot-password">
+                    Forgot Password
+                  </Link>
+                  <Link
+                    className="btn btn-theme flex-grow-1"
+                    to="/user/register"
+                  >
+                    Register here
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 
 const ToolApi = () => {
-  return <div>ToolApi</div>;
+  return <section className="banner-area"></section>;
 };
 
 export default ToolApi;

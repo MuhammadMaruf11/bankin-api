@@ -30,7 +30,7 @@ const Header = () => {
   let mobileMenu;
   if (menuBtn) {
     mobileMenu = (
-      <div className="mobileNavbar flex d-flex">
+      <div className="mobileNavbar">
         <div className="navLink">
           <div className="socialLinks">
             <ul>

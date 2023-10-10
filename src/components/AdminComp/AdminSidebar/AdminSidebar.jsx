@@ -20,7 +20,8 @@ const AdminSidebar = ({ isOpen }) => {
               to="/admin"
             >
               {" "}
-              <i class="fa-sharp fa-solid fa-house"></i> <span>Dashboard</span>
+              <i className="fa-sharp fa-solid fa-house"></i>{" "}
+              <span>Dashboard</span>
             </Link>
           </li>
           <li>
@@ -29,7 +30,8 @@ const AdminSidebar = ({ isOpen }) => {
               className={location.pathname === "/admin/plans" ? "active" : ""}
               to="/admin/plans"
             >
-              <i class="fa-solid fa-circle-dollar"></i> <span>Plan Page</span>
+              <i className="fa-solid fa-circle-dollar"></i>{" "}
+              <span>Plan Page</span>
             </Link>
           </li>
         </ul>

@@ -22,6 +22,31 @@
         }
     }
 
+    @include mq(md) {
+        background: #fff;
+        position: fixed;
+
+        .header-logo {
+            a {
+                color: $theme-color-2;
+            }
+        }
+    }
+
+    @include mq(xs) {
+        background: #fff;
+        position: fixed;
+        transition: all 0.3s linear;
+        border-bottom: 1px solid $theme-color-2;
+        z-index: 999;
+
+        .header-logo {
+            a {
+                color: $theme-color-2;
+            }
+        }
+    }
+
 }
 
 .header-area.header-fixed {
@@ -129,42 +154,34 @@
     width: 100%;
     left: 0;
     background: #fff;
+    border-top: 1px solid $theme-color-2;
     box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
     --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 
     .navLink {
         .socialLinks {
-            margin-left: 50px;
-
-            @include mq(xs) {
-                margin-left: 20px;
-            }
+            display: block;
 
             ul {
-                margin-top: 30px;
 
                 li {
                     display: block;
-                    font-size: 12;
-                    font-weight: 600;
-                    margin-bottom: 30px;
+                    font-size: 14px;
+                    margin: 0;
+                    border-bottom: 1px solid $theme-color-2;
 
                     a {
-                        display: flex;
-                        flex-wrap: wrap;
-                        align-items: center;
+                        color: $theme-color;
+                        padding: 12px 20px;
+                        display: block;
 
-                        span {
-                            color: #334155;
-                            font-size: 13px;
-                            font-weight: 600;
-                            text-transform: uppercase;
+                        @include mq(md) {
+                            padding-left: 58px;
                         }
+                    }
 
-                        i {
-                            margin-right: 10px;
-                            font-size: 18px;
-                        }
+                    &:last-child {
+                        margin-bottom: 0;
                     }
                 }
             }

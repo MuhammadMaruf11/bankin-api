@@ -1,0 +1,265 @@
+@use "common" as *;
+
+.pricing-area {
+    position: relative;
+    padding: 70px 0;
+    overflow: hidden;
+
+    .outer-box {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+
+.pricing-block {
+    position: relative;
+    padding: 0 30px;
+    margin-bottom: 40px;
+
+    .inner-box {
+        position: relative;
+        background-color: #ffffff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        padding: 0 0 30px;
+        max-width: 370px;
+        margin: 0 auto;
+        border-bottom: 20px solid $pricing-nth-one;
+
+        &:hover {
+            .icon-box {
+                i {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .btn-box {
+                a {
+                    color: $pricing-nth-one;
+                    background: none;
+                    border-radius: 0px;
+                    border-color: $pricing-nth-one;
+                }
+            }
+        }
+
+        .icon-box {
+            position: relative;
+            padding: 50px 30px 0;
+            background-color: $pricing-nth-one;
+            text-align: center;
+
+            &::before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 75px;
+                width: 100%;
+                border-radius: 50% 50% 0 0;
+                background-color: #ffffff;
+                content: "";
+            }
+
+            .icon-outer {
+                position: relative;
+                height: 150px;
+                width: 150px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                margin: 0 auto;
+                padding: 10px;
+            }
+
+            i {
+                position: relative;
+                display: block;
+                height: 130px;
+                width: 130px;
+                line-height: 120px;
+                border: 5px solid $pricing-nth-one;
+                border-radius: 50%;
+                font-size: 50px;
+                color: $pricing-nth-one;
+                -webkit-transition: all 600ms ease;
+                -ms-transition: all 600ms ease;
+                -o-transition: all 600ms ease;
+                -moz-transition: all 600ms ease;
+                transition: all 600ms ease;
+            }
+
+        }
+
+        .price-box {
+            position: relative;
+            text-align: center;
+            padding: 10px 20px;
+
+            .title {
+                position: relative;
+                display: block;
+                font-size: 24px;
+                line-height: 1.2em;
+                color: #222222;
+                font-weight: 600;
+            }
+
+            .price {
+                display: block;
+                font-size: 30px;
+                color: #222222;
+                font-weight: 700;
+                color: $pricing-nth-one;
+            }
+        }
+
+        .features {
+            position: relative;
+            max-width: 200px;
+            margin: 0 auto 20px;
+
+            li {
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 30px;
+                color: #848484;
+                font-weight: 500;
+                padding: 5px 0;
+                padding-left: 30px;
+                border-bottom: 1px dashed #dddddd;
+
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    font-size: 16px;
+                    color: #2bd40f;
+                    -moz-osx-font-smoothing: grayscale;
+                    -webkit-font-smoothing: antialiased;
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                    content: "\f058";
+                    font-family: "Font Awesome 6 Pro";
+                    margin-top: -8px;
+                }
+
+                &.false:before {
+                    color: #e1137b;
+                    content: "\f057";
+                }
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                a {
+                    color: #848484;
+                }
+            }
+        }
+
+        .btn-box {
+            position: relative;
+            text-align: center;
+
+            a {
+                position: relative;
+                display: inline-block;
+                font-size: 14px;
+                line-height: 25px;
+                color: #ffffff;
+                font-weight: 500;
+                padding: 8px 30px;
+                background-color: $pricing-nth-one;
+                border-radius: 10px;
+                border-top: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                -webkit-transition: all 400ms ease;
+                -moz-transition: all 400ms ease;
+                -ms-transition: all 400ms ease;
+                -o-transition: all 400ms ease;
+                transition: all 300ms ease;
+
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        .inner-box {
+            border-color: $pricing-nth-two;
+
+            .icon-box {
+                background-color: $pricing-nth-two;
+
+                i {
+                    border-color: $pricing-nth-two;
+                    color: $pricing-nth-two;
+                }
+            }
+
+            .price-box {
+                .price {
+                    color: $pricing-nth-two;
+                }
+            }
+
+            .btn-box {
+                a {
+                    background-color: $pricing-nth-two;
+                }
+            }
+
+            &:hover {
+                .btn-box {
+                    a {
+                        color: $pricing-nth-two;
+                        background: none;
+                        border-radius: 0px;
+                        border-color: $pricing-nth-two;
+                    }
+                }
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        .inner-box {
+            border-color: $pricing-nth-three;
+
+            .icon-box {
+                background-color: $pricing-nth-three;
+
+                i {
+                    border-color: $pricing-nth-three;
+                    color: $pricing-nth-three;
+                }
+            }
+
+            .price-box {
+                .price {
+                    color: $pricing-nth-three;
+                }
+            }
+
+            .btn-box {
+                a {
+                    background-color: $pricing-nth-three;
+                }
+            }
+
+            &:hover {
+                .btn-box {
+                    a {
+                        color: $pricing-nth-three;
+                        background: none;
+                        border-radius: 0px;
+                        border-color: $pricing-nth-three;
+                    }
+                }
+            }
+        }
+    }
+}
