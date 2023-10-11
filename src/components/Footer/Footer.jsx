@@ -20,7 +20,7 @@ const Footer = () => {
                   <img src={Logo} alt="logo" /> Banking
                 </Link>
               </div>
-              <div className="footer-description ms-3 mb-3 pe-5">
+              <div className="footer-description ms-2 mb-3 pe-5">
                 <p>
                   Discover the future of banking with API Banking. Seamlessly
                   integrate our powerful APIs into your financial solutions or

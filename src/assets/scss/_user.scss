@@ -31,3 +31,43 @@
         }
     }
 }
+
+.user-area {
+    padding: 10px 0;
+
+    .breadcrumb {
+        margin-bottom: 30px;
+
+        a {
+            color: $theme-color-2;
+            font-weight: 600;
+            margin: 0 4px;
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+
+    .user-sidebar {
+        background: $theme-color-2;
+
+        ul {
+            list-style: none;
+
+            li {
+                border-bottom: 2px solid $theme-color;
+
+                a {
+                    color: #fff;
+                    display: block;
+                    padding: 12px 20px;
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

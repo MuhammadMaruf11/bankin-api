@@ -1,19 +1,26 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/Home/Home";
+
+// All pages path here
 import Error from "./pages/Error/Error";
-import Login from "./pages/User/Login/Login";
+import Home from "./pages/Home/Home";
+import APITools from "./pages/APITools/APITools";
+import Pricing from "./pages/Pricing/Pricing";
+
+// User pages path here
 import Register from "./pages/User/Register/Register";
+import Login from "./pages/User/Login/Login";
+import UserDashboard from "./pages/User/UserDashboard/UserDashboard";
+import OTP from "./pages/User/OTP/OTP";
 import ForgotPassword from "./pages/User/ForgotPassword/ForgotPassword";
 import ChangePassword from "./pages/User/ChangePassword/ChangePassword";
-import Dashboard from "./pages/User/Dashboard/Dashboard";
-import OTP from "./pages/User/OTP/OTP";
-import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
+
+// Admin pages path here
 import AdminLogin from "./pages/Admin/AdminLogin/AdminLogin";
+import AdminDashboard from "./pages/Admin/AdminDashboard/AdminDashboard";
 import AdminPlan from "./pages/Admin/AdminPlan/AdminPlan";
 import CreatePlan from "./pages/Admin/AdminPlan/CreatePlan";
 import UpdatePlan from "./pages/Admin/AdminPlan/UpdatePlan";
-import APITools from "./pages/APITools/APITools";
-import Pricing from "./pages/Pricing/Pricing";
+import UserPlan from "./pages/User/UserPlan/UserPlan";
 
 function App() {
   return (
@@ -26,9 +33,10 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
 
         {/* User routes herer  */}
-        <Route path="/user/" element={<Dashboard />} />
-        <Route path="/user/login" element={<Login />} />
+        <Route path="/user/" element={<UserDashboard />} />
+        <Route path="/user/plan" element={<UserPlan />} />
         <Route path="/user/register" element={<Register />} />
+        <Route path="/user/login" element={<Login />} />
         <Route path="/user/otp" element={<OTP />} />
         <Route path="/user/forgot-password" element={<ForgotPassword />} />
         <Route path="/user/change-password" element={<ChangePassword />} />
