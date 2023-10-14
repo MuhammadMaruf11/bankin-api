@@ -1,5 +1,7 @@
 import React from "react";
 import Arrow from "../../assets/img/arrow.png";
+import Car from "../../assets/img/car.png";
+import { WorkProcessData } from "./WorkProcessData";
 
 const WorkProcess = () => {
   return (
@@ -16,6 +18,7 @@ const WorkProcess = () => {
         <div className="row">
           <div className="col-12">
             <div className="flowchart-wrap">
+              <img className="running-bike" src={Car} alt="Bike" />
               <div className="flowchart-container">
                 <div className="node digital-decoder">Digital Decoder</div>{" "}
                 <div className="arrow">
@@ -58,45 +61,27 @@ const WorkProcess = () => {
           <div className="work-process-content">
             <h3>How it works:</h3>
             <ul>
-              <li>Cardholder visits website, selects items and checks out.</li>
-              <li>Cardholder selects a method of payment.</li>
-              <li>Cardholder enters payment information and clicks submit.</li>
-              <li>
-                Merchant’s website will post cardholder details to the Moneris
-                Gateway
-              </li>
-              <li>
-                Cardholder details are sent through the Moneris gateway to the
-                card associations for authorization
-              </li>
-              <li>
-                The message will travel through MasterCard or Visa’s data
-                processing networks. The card number and expiry date is sent
-                through the corresponding network to the cardholder’s issuing
-                bank.{" "}
-              </li>
-              <li>
-                The cardholder’s bank reviews the authorization request and
-                sends the authorization response.
-              </li>
-              <li>
-                Moneris (Moneris Gateway) returns the response to the merchant
-                to display the final receipt.
-              </li>
-              <li>
-                Merchant will be required to generate a cardholder receipt in
-                accordance with the guidelines provided on this site.
-              </li>
-              <li>
-                Cardholder receives confirmation of order through merchant’s
-                website.
-              </li>
+              {WorkProcessData &&
+                WorkProcessData.slice(0, 10).map((data) => {
+                  return (
+                    <li key={data.id}>
+                      <i className="fa-sharp fa-regular fa-arrows-up-down-left-right fa-spin"></i>
+                      <span>{data.descritpion}</span>
+                    </li>
+                  );
+                })}
             </ul>
-            <p>ALternate Customized Solutions:</p>
+            <h6 className="my-3">ALternate Customized Solutions:</h6>
             <ul>
-              <li>Hosted Pay Page</li>
-              <li>Batch Upload</li>
-              <li>Tokenization</li>
+              {WorkProcessData &&
+                WorkProcessData.slice(10, 14).map((data) => {
+                  return (
+                    <li key={data.id}>
+                      <i className="fa-sharp fa-regular fa-arrows-up-down-left-right fa-spin"></i>
+                      <span>{data.descritpion}</span>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
         </div>

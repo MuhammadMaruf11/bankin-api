@@ -26,6 +26,12 @@
     position: relative;
     margin-bottom: 70px;
 
+    .running-bike {
+        width: 50px;
+        position: absolute;
+        animation: runningBike 20s infinite;
+    }
+
     .flowchart-arrow {
         display: flex;
         align-items: center;
@@ -89,5 +95,92 @@
         background-clip: text;
         display: inline-block;
         text-transform: capitalize;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+
+            i {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@keyframes runningBike {
+    0% {
+        left: 150px;
+        top: -70px;
+        rotate: 90deg;
+    }
+
+    30% {
+        left: 90%;
+        top: -70px;
+        rotate: 90deg;
+    }
+
+    31% {
+        rotate: 180deg;
+        top: -70px;
+        left: 90%;
+    }
+
+    39% {
+        rotate: 180deg;
+        top: 80px;
+        left: 90%;
+    }
+
+    40% {
+        rotate: 270deg;
+        top: 80px;
+        left: 90%;
+    }
+
+    60% {
+        rotate: 270deg;
+        top: 80px;
+        left: 62%;
+    }
+
+    73% {
+        left: 45%;
+    }
+
+    85% {
+        rotate: 270deg;
+        top: 80px;
+        left: 26%;
+    }
+
+    86% {
+        rotate: 360deg;
+        top: 80px;
+        left: 26%;
+    }
+
+    91% {
+        rotate: 360deg;
+        top: 60px;
+        left: 26%;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    91.1% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        opacity: 0;
+
     }
 }
