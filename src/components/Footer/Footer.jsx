@@ -30,7 +30,7 @@ const Footer = () => {
                   Join us today and unlock a new era of banking possibilities.
                 </p>
               </div>
-              <div className="footerWrapper ms-3">
+              <div className="footerWrapper ms-2">
                 <div className="socialLinks">
                   <ul>
                     <li>

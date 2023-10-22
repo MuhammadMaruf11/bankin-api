@@ -36,13 +36,16 @@
 }
 
 .cta-btn {
-    border: 0;
     outline: 0;
-    border: 12px solid transparent;
+    border: 6px solid transparent;
     border-image: url('../img/border-gradient.png') 40%;
     background: #fff;
     display: inline-block;
     cursor: pointer;
+    color: $heading-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 8px;
 
     a,
     button {
@@ -51,10 +54,12 @@
         color: $heading-color;
         text-transform: uppercase;
         font-weight: 700;
+        padding: 4px 8px;
     }
 
 
     &:hover {
+        color: $theme-color;
 
         a,
         button {
@@ -64,24 +69,30 @@
 }
 
 .contact-btn {
-    border: 0;
     outline: 0;
-    border: 12px solid transparent;
+    border: 6px solid transparent;
     border-image: url('../img/border.png') 40%;
     background: #fff;
     display: inline-block;
     cursor: pointer;
+    color: $heading-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 8px;
 
-    a {
+    a,
+    button {
         display: inline-block;
         border-radius: 25px;
         color: $heading-color;
         text-transform: uppercase;
         font-weight: 700;
+        padding: 4px 8px;
     }
 
 
     &:hover {
+        color: $theme-color;
 
         a {
             color: $theme-color;

@@ -34,6 +34,18 @@ const AdminSidebar = ({ isOpen }) => {
               <span>Plan Page</span>
             </Link>
           </li>
+          <li>
+            {" "}
+            <Link
+              className={
+                location.pathname === "/admin/api-keys" ? "active" : ""
+              }
+              to="/admin/api-keys"
+            >
+              <i className="fa-solid fa-circle-dollar"></i>{" "}
+              <span>API key </span>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

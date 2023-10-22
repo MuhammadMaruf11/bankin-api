@@ -8,13 +8,11 @@ const APITools = () => {
   const h1Title = "Banking Service";
   const textTheme = "API";
   const buttons = (
-    <>
-      <div className="cta-btn">
-        <Link to="/">
-          <i className="fa-sharp fa-solid fa-key"></i> <span>Get API Key</span>
-        </Link>
-      </div>
-    </>
+    <div className="banner-btn">
+      <Link to="/" className="cta-btn">
+        <i className="fa-sharp fa-solid fa-key"></i> <span>Get API Key</span>
+      </Link>
+    </div>
   );
   return (
     <Layout>

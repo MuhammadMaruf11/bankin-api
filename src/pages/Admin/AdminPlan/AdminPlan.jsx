@@ -35,11 +35,10 @@ const AdminPlan = () => {
       <div className="w-100">
         <div className="content-header">
           <h2>Plan Table</h2>
-          <div className="cta-btn">
-            <Link to="/admin/plan/add" className="">
-              Create Plan
-            </Link>
-          </div>
+
+          <Link to="/admin/plan/add" className="cta-btn px-3 py-1">
+            Create Plan
+          </Link>
         </div>
         <div className="content-body">
           <table className="table-striped table-bordered table">

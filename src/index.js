@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BrowserRouter, useLocation } from "react-router-dom";
+import { HashRouter, useLocation } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./assets/css/fontawesome.min.css";
@@ -10,10 +10,10 @@ import "./index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <ScrollToTop />
     <App />
-  </BrowserRouter>
+  </HashRouter>
 );
 function ScrollToTop() {
   const { pathname } = useLocation();

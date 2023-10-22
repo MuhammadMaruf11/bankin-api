@@ -21,6 +21,9 @@ import AdminPlan from "./pages/Admin/AdminPlan/AdminPlan";
 import CreatePlan from "./pages/Admin/AdminPlan/CreatePlan";
 import UpdatePlan from "./pages/Admin/AdminPlan/UpdatePlan";
 import UserPlan from "./pages/User/UserPlan/UserPlan";
+import AdminApikeys from "./pages/Admin/AdminApiKeys/AdminApikeys";
+import CreateAdminApi from "./pages/Admin/AdminApiKeys/CreateAdminApi";
+import UpdateApiKeys from "./pages/Admin/AdminApiKeys/UpdateApiKeys";
 
 function App() {
   return (
@@ -47,6 +50,9 @@ function App() {
         <Route path="/admin/plans" element={<AdminPlan />} />
         <Route path="/admin/plan/add" element={<CreatePlan />} />
         <Route path="/admin/plan/edit/:id" element={<UpdatePlan />} />
+        <Route path="/admin/api-keys" element={<AdminApikeys />} />
+        <Route path="/admin/api-key/add" element={<CreateAdminApi />} />
+        <Route path="/admin/api-key/edit/:id" element={<UpdateApiKeys />} />
       </Routes>
     </>
   );

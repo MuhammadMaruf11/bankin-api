@@ -1,0 +1,118 @@
+@use "common" as *;
+
+.tool-api-area {
+    padding: 70px 0;
+}
+
+.sidebar-navs {
+    background: $theme-color-2;
+    padding: 20px;
+
+    ul {
+        border: 0;
+        outline: 0;
+
+        li {
+            margin-bottom: 12px;
+            border: 0;
+            display: block;
+            color: $theme-color-2;
+            color: #fff;
+
+            &.react-tabs__tab--selected {
+                background: $theme-color;
+                color: #fff;
+                border-radius: 6px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.main-content-tabs {
+    .content-title {
+
+        h2,
+        h3 {
+            font-weight: 500;
+            color: $theme-color;
+        }
+    }
+
+    .content-description {
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    .content-list {
+        ol {
+            li {
+                margin-bottom: 8px;
+            }
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                margin-bottom: 20px;
+
+                span {
+                    background: #e1e1e1;
+                    padding: 3px 6px;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+
+    table {
+        border-color: $theme-color;
+
+        thead {
+            border-color: $theme-color;
+
+            tr {
+                border-color: $theme-color;
+
+                th {
+                    background: $theme-color-2;
+                    color: #fff;
+                    border-color: $theme-color;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    font-size: 14px;
+                    vertical-align: middle;
+
+                    p {
+                        margin-bottom: 20px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    ul {
+                        list-style: none;
+
+                    }
+
+                    span {
+                        background: #e1e1e1;
+                        padding: 3px 6px;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

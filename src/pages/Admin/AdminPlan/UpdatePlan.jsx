@@ -6,9 +6,9 @@ const UpdatePlan = () => {
   const [planData, setPlanData] = useState({
     name: "",
     description: "",
-    price: 0,
+    price: null,
     duration: "",
-    quantity: 0,
+    quantity: null,
   });
 
   const handleChange = (e) => {
@@ -27,9 +27,9 @@ const UpdatePlan = () => {
       setPlanData({
         name: "",
         description: "",
-        price: 0,
+        price: null,
         duration: "",
-        quantity: 0,
+        quantity: null,
       });
 
       // Handle any additional logic after successful submission
@@ -44,75 +44,95 @@ const UpdatePlan = () => {
       <div className="w-100">
         <div className="content-header">
           <h2>Update Plan</h2>
-          <div className="cta-btn">
-            <Link className="px-1" to="/admin/plans">
-              Back
-            </Link>
-          </div>
+          <Link className="cta-btn px-3 py-1" to="/admin/plans">
+            Back
+          </Link>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="">
-              Name <span className="text-danger">*</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={planData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="">
-              Description<span className="text-danger">*</span>
-            </label>
-            <input
-              type="text"
-              name="description"
-              value={planData.description}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="">
-              Price<span className="text-danger">*</span>
-            </label>
-            <input
-              type="number"
-              name="price"
-              value={planData.price}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor>
-              Duration<span className="text-danger">*</span>
-            </label>
-            <input
-              type="text"
-              name="duration"
-              value={planData.duration}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="input-group">
-            <label htmlFor="">
-              Quantity<span className="text-danger">*</span>
-            </label>
-            <input
-              type="number"
-              name="quantity"
-              value={planData.quantity}
-              onChange={handleChange}
-              required
-            />
+          <div className="row">
+            <div className="col-md-6">
+              {" "}
+              <div className="input-wrap">
+                <label htmlFor="">
+                  Name <span className="text-danger">*</span>
+                </label>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="name"
+                  value={planData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
+              {" "}
+              <div className="input-wrap">
+                <label htmlFor="">
+                  Price<span className="text-danger">*</span>
+                </label>
+                <input
+                  className="form-control"
+                  type="number"
+                  name="price"
+                  value={planData.price}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-12">
+              {" "}
+              <div className="input-wrap">
+                <label htmlFor="">
+                  Description<span className="text-danger">*</span>
+                </label>
+                <textarea
+                  className="form-control"
+                  type="text"
+                  name="description"
+                  value={planData.description}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                ></textarea>
+              </div>
+            </div>
+            <div className="col-md-6">
+              {" "}
+              <div className="input-wrap">
+                <label htmlFor>
+                  Duration<span className="text-danger">*</span>
+                </label>
+                <input
+                  className="form-control"
+                  type="text"
+                  name="duration"
+                  value={planData.duration}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="input-wrap">
+                <label htmlFor="">
+                  Quantity<span className="text-danger">*</span>
+                </label>
+                <input
+                  className="form-control"
+                  type="number"
+                  name="quantity"
+                  value={planData.quantity}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
           </div>
           <br />
-          <button className="btn btn-success" type="submit">
+          <button className="btn btn-theme" type="submit">
             Update Plan
           </button>
         </form>
